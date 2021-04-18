@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <m-header />
+    
     <section class="section">
       <nav class="nav has-shadow container">
         <div class="container">
@@ -27,14 +29,21 @@
         </div>
       </div>
     </section>
+
+    <m-footer />
   </div>
 </template>
 
 <script>
 import trackService from './services/track'
+import mFooter from './components/layout/Footer.vue' 
+import mHeader from './components/layout/Header.vue'
 
 export default {
   name: 'app',
+
+  components: { mFooter, mHeader },
+
   data () {
     return {
       searchQuery: '',
